@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+body {
+    background-color: #333;
+    overflow: auto;
+    height: 100vh;
+}
+
+.card {
+    width: 90%;
+    margin: 50px auto;
+    padding: 40px 35px;
+    text-align: center;
+    max-width: 470px;
+    background-color: #e6f5f3;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    /* needed for suggestions */
+}
+
+.search input[type='search'] {
+    padding: 10px 25px;
+    outline: none;
+    border: none;
+    background-color: #7777771a;
+    border-radius: 30px;
+    height: 60px;
+    flex: 1;
+    margin-right: 16px;
+    position: relative;
+}
+
+.search button {
+    border: none;
+    outline: none;
+    background-color: hsla(0, 0%, 48%, 0.90);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.search img {
+    width: 30px;
+}
+
+/* ================= AUTOCOMPLETE ================= */
+.suggestions {
+    list-style: none;
+    margin: 5px 0 0 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    /* match input width */
+    left: 0;
+    top: 65px;
+    /* just below input */
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 100;
+    display: none;
+    /* hidden by default */
+}
+
+.suggestions li {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.suggestions li:hover {
+    background: #f2f2f2;
+}
+
+/* ================= WEATHER ================= */
+.icon {
+    width: 50px;
+    margin-top: 30px;
+}
+
+.weather {
+    margin: 10px;
+}
+
+.weather h1 {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.weather h2 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.details h1 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.details h2 {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.details {
+    display: flex;
+        justify-content: space-between;
+        /* spreads children to edges */
+        align-items: center;
+        padding: 0 10px;
+        margin-top: 50px;
+}
+
+.col {
+    display: flex;
+        justify-content: space-between;
+        /* spreads two inner divs */
+        width: 100%;
+        /* make it full width of parent */
+        padding: 0 10px;
+}
+
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
